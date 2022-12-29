@@ -15,8 +15,8 @@ func main() {
 		ToKafka:   true,    //控制日志是否发送到kafka
 		KafkaConf: logger.KafkaConf{
 			Producer:   nil,    //写日志时kafka生产者
-			BrokerList: "test-kf1.adsys.shbt2.qihoo.net:9092,test-kf2.adsys.shbt2.qihoo.net:9092,test-kf3.adsys.shbt2.qihoo.net:9092",  //kafka集群broker
-			Topic:      "dj.mdsp.mesos.server.log", //写日志时kafka的topic
+			BrokerList: "test-kf1.xxxx.net:9092,test-kf3.xxx.net:9092",  //kafka集群broker
+			Topic:      "dj.server.log", //写日志时kafka的topic
 		},
 	}
 	zapLogger, err := zapLoggerT.NewZapLogger()
@@ -24,11 +24,11 @@ func main() {
 		fmt.Println(err.Error())
 	}
 	zapLogger.Info("test log info",
-		zap.String("host", "e.360.cn"),
+		zap.String("host", "xxx.cn"),
 		zap.String("log_time", time.Now().Format("2006-01-02 15:04:05")),
 		)
 	zapLogger.Error("test log error",
-		zap.String("host", "mobile.e.360.cn"),
+		zap.String("host", "xxx.cn"),
 		zap.String("log_time", time.Now().Format("2006-01-02 15:04:05")),
 	)
 	select {}

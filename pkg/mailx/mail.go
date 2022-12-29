@@ -12,9 +12,9 @@ import (
 )
 
 var (
-	externalEmailAddr   = "mta.ucmail.360.cn"
+	externalEmailAddr   = "xxx.xxx.cn"
 	internalEmailAddr   = "127.0.0.1"
-	instrumentationName = "adgit.src.corp.qihoo.net/plat-arch/xkits/netx/mailx"
+	instrumentationName = "xxxx.com/plat-arch/xkits/netx/mailx"
 )
 
 func SendInternal(ctx context.Context, msg *Message) (err error) {

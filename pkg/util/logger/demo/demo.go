@@ -14,8 +14,8 @@ func main() {
 		ToKafka:   true,
 		KafkaConf: logger2.KafkaConf{
 			Producer:   nil,
-			BrokerList: "test-kf1.adsys.shbt2.qihoo.net:9092,test-kf2.adsys.shbt2.qihoo.net:9092,test-kf3.adsys.shbt2.qihoo.net:9092",
-			Topic:      "dj.mdsp.mesos.server.log",
+			BrokerList: "test-xxx.net:9092",
+			Topic:      "dj.server.log",
 			//LogListChanLen: 2,
 		},
 	}
@@ -40,7 +40,7 @@ func main() {
 	)
 
 	//zapLogger.Error("test log error",
-	//	zap.String("host", "mobile.e.360.cn"),
+	//	zap.String("host", "xxx.cn"),
 	//	zap.String("log_time", time.Now().Format("2006-01-02 15:04:05")),
 	//)
 	select {}
