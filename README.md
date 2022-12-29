@@ -17,37 +17,37 @@ Gin框架脚手架 by liwei
 ### 目录结构
 
 ```
-├── conf                       // 项目配置                       
+├── conf                            // 项目配置                       
 │   ├── dev
-│       └── app.toml           // 测试环境
+│       └── app.toml                // 测试环境
 │   └── prod
-│       └── app.toml           // 正式环境
+│       └── app.toml                // 正式环境
 ├── datasource 
-│   ├── dbhelper.go                // 连接数据库
-|   ├── hive.go                    // 连接hive
-|   └── redishelper.go             // 连接redis
-├── middleware                        // 中间件
+│   ├── dbhelper.go                 // 连接数据库
+|   ├── hive.go                     // 连接hive
+|   └── redishelper.go              // 连接redis
+├── middleware                      // 中间件
 │   ├── access                 
 │   │   ├── jwt.go
 │   │   ├── csrf.go
 │   │   ├── recover.go
-├── models                     // 数据操作层
-│   ├── demo.go    // 业务model demo
-│   └── models.go  // 初始化一些连接资源
-├── pkg                   // 第三方包
-│   ├── curl       // http请求方法
-│   ├── e          // 错误码
-│   ├── httpx      // http请求方法
-│   ├── mailx      // 发邮件
-│   └── setting    // 加载配置文件
-├── routers              // 路由处理层
+├── models                          // 数据操作层
+│   ├── demo.go                     // 业务model demo
+│   └── models.go                   // 初始化一些连接资源
+├── pkg                             // 第三方包
+│   ├── curl                        // http请求方法
+│   ├── e                           // 错误码
+│   ├── httpx                       // http请求方法
+│   ├── mailx                       // 发邮件
+│   └── setting                     // 加载配置文件
+├── routers                         // 路由处理层
 │   ├── api
-|   │   └── v1        // controller
+|   │   └── v1                      // controller
 |   │       └── demo.go  
-│   └── router.go     // 路由文件
+│   └── router.go                   // 路由文件
 ├── go.mod
 ├── go.sum
-├── main.go                // 主程序入口
+├── main.go                         // 主程序入口
 └── README.MD
 
 ```
