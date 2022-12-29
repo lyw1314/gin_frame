@@ -74,4 +74,21 @@ Gin框架脚手架 by liwei
     trunk: ./main 
     online: ./main --env=pro --config_dir=xxx
 
+demo数据表
+    
+    CREATE TABLE `blog_article` (
+    `id` int unsigned NOT NULL AUTO_INCREMENT,
+    `tag_id` int unsigned DEFAULT '0' COMMENT '标签ID',
+    `title` varchar(100) DEFAULT '' COMMENT '文章标题',
+    `desc` varchar(255) DEFAULT '' COMMENT '简述',
+    `content` text,
+    `created_on` int DEFAULT NULL,
+    `created_by` varchar(100) DEFAULT '' COMMENT '创建人',
+    `modified_on` int unsigned DEFAULT '0' COMMENT '修改时间',
+    `modified_by` varchar(255) DEFAULT '' COMMENT '修改人',
+    `deleted_on` int unsigned DEFAULT '0',
+    `state` tinyint unsigned DEFAULT '1' COMMENT '状态 0为禁用1为启用',
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COMMENT='文章管理';
 
+    
