@@ -1,0 +1,48 @@
+RUN_MODE="release"
+#GORM 打印SQL开关 开启：True；关闭：false
+GORM_LOG_MODE = false
+
+[app]
+PAGE_SIZE = 10
+JWT_SECRET = "2ffr43343409&^(9990"
+
+[server]
+READ_TIMEOUT = 60
+WRITE_TIMEOUT = 60
+HTTP_SERVER_PORT = 8088
+
+[log]
+FILE_NAME = "./logs/zap.log"
+#标准输出开关
+TO_CONSOLE = true
+#发kafka开关
+TO_KAFKA = false
+#记录到文件开关
+TO_LOCAL_FILE = true
+
+[database.center]
+TYPE = "mysql"
+USER = "lyw555666"
+PASSWORD = "lyw555666"
+HOST = "127.0.0.1"
+PORT = 3306
+DB_NAME = "blog"
+TIMEOUT = 100
+READ_TIMEOUT = 100
+CHARSET = "utf8"
+MAX_IDLE = 100
+MAX_CONNECTION = 1000
+SAMPLE_FREQ = 1
+
+[redis.master]
+HOST = "10.20.209.17"
+PORT = 6322
+PWD = "7182511635313c72"
+IDLE_TIMEOUT = 30
+MAX_IDLE = 100
+MAX_ACTIVE = 10
+CONNECT_TIMEOUT = 30
+READ_TIMEOUT = 3
+WRITE_TIMEOUT = 3
+MIN_IDLE_CONS = 100
+POOL_SIZE = 5
