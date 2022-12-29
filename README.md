@@ -68,6 +68,9 @@ Gin框架脚手架 by liwei
     2.routers/router.go 添加路由
     3.models 新建文件，添加数据存取方法
     
-
+启动脚本：
+    
+    trunk: ./main 
+    online: ./main --env=pro --config_dir=xxx
 
 
