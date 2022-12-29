@@ -26,6 +26,7 @@ Gin框架脚手架 by liwei
 │   ├── dbhelper.go                 // 连接数据库
 |   ├── hive.go                     // 连接hive
 |   └── redishelper.go              // 连接redis
+├── grpc_pb                         // grpc pb库
 ├── middleware                      // 中间件
 │   ├── access                 
 │   │   ├── jwt.go
