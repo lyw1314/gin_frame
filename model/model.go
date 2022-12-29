@@ -2,7 +2,6 @@ package model
 
 import (
 	"context"
-	"fmt"
 	"gin_frame/datasource"
 	pb "gin_frame/grpc_pb/api_data"
 	"gin_frame/pkg/setting"
@@ -27,7 +26,7 @@ func init() {
 	initRedis()
 
 	// 初始化grpc client
-	InitDApiDataClient()
+	InitApiDataClient()
 }
 
 // 初始化所有DB
@@ -50,11 +49,10 @@ func initRedis() {
 	}
 }
 
-// InitDApiDataClient 初始化apiData GRPC服务
-func InitDApiDataClient() {
+// InitApiDataClient 初始化apiData GRPC服务
+func InitApiDataClient() {
 	port := setting.AppC.GetString("api_data.port")
 	timeOut := time.Duration(setting.AppC.GetInt64("api_data.timeout"))
-	fmt.Println("===", port, timeOut)
 	ctx, cancel := context.WithTimeout(context.TODO(), time.Second*timeOut)
 	defer cancel()
 	conn, err := grpc.DialContext(ctx, port, grpc.WithInsecure(), grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(1024*1024*1024)))
