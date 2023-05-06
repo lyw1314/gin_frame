@@ -201,27 +201,6 @@ func ValidateUrlType(myUrl string) bool {
 	return true
 }
 
-// 是否是奇虎图床
-func IsQhimg(myUrl string) bool {
-
-	myUrl = strings.Replace(myUrl, "%", "%25", -1)
-	myUrl = strings.Replace(myUrl, "\\", "", -1)
-	myUrl = strings.ToLower(myUrl)
-	u, err := url.Parse(myUrl)
-	if err != nil {
-		return false
-	}
-	host_arr := strings.Split(strings.Split(u.Host, ":")[0], ".")
-	l := len(host_arr)
-	if l <= 2 {
-		return false
-	}
-	if host_arr[l-2] == "qhimg" && host_arr[l-1] == "com" {
-		return true
-	}
-	return false
-}
-
 // 是否是深度链接deeplink
 func IsDeepLinkUrl(myUrl string) bool {
 	//不允许出现中文、空格、换行符、tab制表符。最多输入1024个字符。
